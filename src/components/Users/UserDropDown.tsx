@@ -25,8 +25,11 @@ class UserDropDown extends React.Component<Props, IState> {
         return (
             <div>
                 <FormControl className={classes.formControl}>
-                    <InputLabel shrink id="demo-simple-select-placeholder-label-label">
-                        Priority
+                    <InputLabel
+                        shrink id="demo-simple-select-placeholder-label-label"
+                        className={classes.labelColor}
+                    >
+                       Users
                     </InputLabel>
                     <Select
                         labelId="demo-simple-select-placeholder-label-label"
@@ -35,12 +38,13 @@ class UserDropDown extends React.Component<Props, IState> {
                         onChange={handleChange}
                         displayEmpty
                         className={classes.selectEmpty}
+                        variant={'outlined'}
                     >
-                        <MenuItem value={'none'}>
+                        <MenuItem value={'none'} className={classes.menuItems}>
                             <em>None</em>
                         </MenuItem>
-                        <MenuItem value={'user 1'}>user 1</MenuItem>
-                        <MenuItem value={'user 2'}>user 2</MenuItem>
+                        <MenuItem value={'user 1'} className={classes.menuItems}>user 1</MenuItem>
+                        <MenuItem value={'user 2'} className={classes.menuItems}>user 2</MenuItem>
                     </Select>
                 </FormControl>
             </div>

@@ -1,8 +1,7 @@
 import React, {PureComponent} from 'react';
 import {Box, Button, Grid, Typography} from "@material-ui/core";
 import createHistory from 'history/createBrowserHistory';
-
-
+import './LoginScreen.scss';
 
 export class LoginScreen extends PureComponent {
 
@@ -61,14 +60,20 @@ export class LoginScreen extends PureComponent {
         return (
             <Grid container direction={'column'} justify={'center'} alignItems={'center'}>
                 <Grid item>
-                    <Box mt={5}>
+                    <Box mt={10} mb={5}>
+                        <Box mb={3}>
                     <Typography >Hi welcome to my project !!!</Typography>
+                        </Box>
+                        <Box mb={3}>
                     <p>
                         <b>Username</b>: admin/ user1/ user2
                     </p>
+                        </Box>
+                        <Box>
                     <p>
                         <b>Password</b>: admin/ user1/ user2
                     </p>
+                        </Box>
                     </Box>
                 </Grid>
 
@@ -80,19 +85,21 @@ export class LoginScreen extends PureComponent {
                             {this.state.error}
                         </h3>
                     }
-                    <Box mt={5} mb={3}>
-                        <label> <b> User Name</b> :&nbsp; &nbsp;</label>
+                    <Box mt={3} mb={3}>
+                        <label> <b> User Name</b> :&nbsp; &nbsp; </label>
                         <input type="text" data-test="username" value={this.state.username} onChange={handleUserChange} />
                     </Box>
                     <Box mb={2}>
                         <label><b>Password</b> : &nbsp; &nbsp;&nbsp; </label>
                         <input type="password" data-test="password" value={this.state.password} onChange={handlePassChange} />
                     </Box>
-                    <Box ml={15}>
+                    <Box ml={17} mt={5}>
                         <Button
                             type="submit"
                             data-test="submit"
-                            >Log In</Button>
+                            variant="contained"
+                            id={'log-in-button'}
+                        >Log In</Button>
                     </Box>
                 </form>
             </Grid>

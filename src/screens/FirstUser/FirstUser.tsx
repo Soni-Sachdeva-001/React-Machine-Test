@@ -13,12 +13,12 @@ export class FirstUser extends PureComponent<Props,{}> {
         return (
             <Grid container justify={'center'} alignContent={'center'}>
                 <form >
-                    <Box my={2}>
-                        <label>Todo Title:  </label>
+                    <Box my={3}>
+                        <label><b>Todo Title</b>: &nbsp;&nbsp;</label>
                         <input type="Title" data-test="Title" value={this.props.title} />
                     </Box>
-                    <Box mb={2}>
-                        <label> Decription: </label>
+                    <Box mb={3}>
+                        <label><b>Decription</b> : </label>
                         <input type="Decription" data-test="Decription" value={this.props.description} />
                     </Box>
                 </form>

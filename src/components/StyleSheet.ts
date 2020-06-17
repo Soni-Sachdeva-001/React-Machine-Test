@@ -8,4 +8,10 @@ export const styleSheet = (theme: Theme): any => createStyles({
 	selectEmpty: {
 		marginTop: theme.spacing(2),
 	},
+	labelColor: {
+		color: 'black',
+	},
+	menuItems: {
+		color: "red",
+	}
 	});

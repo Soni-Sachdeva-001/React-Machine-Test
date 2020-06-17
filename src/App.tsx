@@ -1,9 +1,9 @@
 import React, {PureComponent} from 'react';
-import {LoginScreen} from "./screens/LoginScreen";
+import {LoginScreen} from "./screens/LoginScreen/LoginScreen";
 import {BrowserRouter, Route} from "react-router-dom";
-import HomeScreen from "./screens/HomeScreen";
-import {FirstUser} from "./screens/FirstUser";
-import {SecondUser} from "./screens/SecondUser";
+import HomeScreen from "./screens/HomeScreen/HomeScreen";
+import {FirstUser} from "./screens/FirstUser/FirstUser";
+import {SecondUser} from "./screens/SecondUser/SecondUser";
 
 class App extends PureComponent <{},{}> {
     render() {

@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react';
 import {Box, Button, Grid, WithStyles} from "@material-ui/core";
-import UserDropDown from "../components/Users/UserDropDown";
-import {styleSheet} from "../components/StyleSheet";
-
+import UserDropDown from "../../components/Users/UserDropDown";
+import {styleSheet} from "../../components/StyleSheet";
+import './HomeScree.scss';
 
 type Props = WithStyles <typeof styleSheet> ;
 
@@ -50,11 +50,11 @@ export class HomeScreen extends PureComponent<Props, {}>{
                         </h3>
                     }
                     <Box my={3}>
-                    <label>Todo Title : &nbsp; </label>
+                        <label><b>Todo Title</b>: &nbsp;&nbsp;</label>
                     <input type="Title" data-test="Title" value={this.state.title} onChange={handleTitleChange} />
                     </Box>
                     <Box mb={3}>
-                    <label> Decription : </label>
+                        <label><b>Decription</b> : </label>
                     <input type="Decription" data-test="Decription" value={this.state.description} onChange={handleDescChange} />
                     </Box>
                         <Box>
@@ -62,7 +62,13 @@ export class HomeScreen extends PureComponent<Props, {}>{
                                 />
 
                                 <Box mt={5} ml={13  }>
-                                    <Button type="submit" value="Save" data-test="submit">SAVE</Button>
+                                    <Button
+                                            type="submit"
+                                            data-test="submit"
+                                            variant="contained"
+                                            id={'log-in-button'}>
+                                        SAVE
+                                    </Button>
                                 </Box>
                         </Box>
                     </form>
